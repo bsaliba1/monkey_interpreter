@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-    fmt.Printf("Your lucky number is %d!\n", randomNumber())
+    fmt.Printf("Your lucky number is %d!\n", RandomNumber())
 }
