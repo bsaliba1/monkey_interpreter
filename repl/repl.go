@@ -16,14 +16,11 @@ func Start(in io.Reader, out io.Writer) {
 
 	for {
 		fmt.Print(PROMPT)
-		scanned := scanner.Scan()
-		if !scanned { // if there is no content
-			return
-		}
-		line := scanner.Text()
+		_ = scanner.Scan() // await content
+		line := scanner.Text() // convert content to text
 		l := lexer.New(line)
 
-		for tok := l.NextToken(); tok.Type != token.EOF; tok = l.NextToken() {
+		for tok := l.NextToken(); tok.Type != token.EOF; tok = l.NextToken() { // convert text to tokens
 			fmt.Printf("%+v\n", tok)
 		}
 	}
