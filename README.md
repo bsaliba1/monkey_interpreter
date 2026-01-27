@@ -1,8 +1,16 @@
 # Monkey Interpreter
 
-This is an interpreter that is built by following "Writing an Interpreter in Go" by Thornsten Ball. This starts with a "Lexer" which can be found in the `lexer` folder, then a "Parser" found in the `parser` folder.
+An interpreter for the Monkey programming language, built by following "Writing an Interpreter in Go" by Thorsten Ball. Monkey is a simple, dynamically-typed language that supports integers, booleans, strings, arrays, hashes, and first-class functions.
 
-The parser is a recursive descent parser and more specifically a “top down operator precedence” parser.
+The interpreter uses a lexer (found in the `lexer` folder) and a recursive descent parser using "top down operator precedence" (Pratt parsing).
+
+## Usage
+
+To start the REPL:
+
+```bash
+go run .
+```
 
 ## Useful commands
 - `go test -bench=. <folder_name>` - to run all benchmarks in that folder **(with unit tests)**
